@@ -1,0 +1,41 @@
+﻿@model  List<TestDBTest.Services.OfficialGazzet.Dto.OfficialGazzeteDto>
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+    <div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Пријава за несакани реакции на медицински помагала</th>
+                    <th>Иницијали за име </th>
+                    <th>Датум на раѓање</th>
+                    <th>Возраст Години</th>
+                    <th>OutComeOfAverseReaction</th>
+                    <th>ErrorDetectionDate</th>
+                    <th>connectionBetweenAdverseReaction</th>
+                    <th></th>
+                </tr>
+            </thead>
+            @foreach (var item in Model.Gazzetes)
+            {
+                <tr>
+                    <td>@item.ApplicationForUnwantedMedDevices</td>
+                    <td>@item.PersonFullName</td>
+                    <td>@item.PersonDateOfBirth</td>
+                    <td>@item.PersonAge</td>
+                    <td>@item.DescribeYourAdverseReaction</td>
+                    <td>@item.OutComeOfAverseReaction</td>
+                    <td>@item.ErrorDetectionDate</td>
+                    <td>@item.ConnectionBetweenAdverseReaction</td>
+                </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

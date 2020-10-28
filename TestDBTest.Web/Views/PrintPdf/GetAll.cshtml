@@ -1,0 +1,42 @@
+﻿@model  ICollection<TestDBTest.Services.OfficialGazette.Dto.CustomCreateDto>
+
+@{
+    ViewBag.Title = "GetAll";
+}
+
+<h2>GetAll</h2>
+
+<p>
+    @Html.ActionLink("Print", "PrintAll")
+</p>
+<h2>GetAll</h2>
+
+<table class="table">
+    <tr>
+        <th>Пријава за несакани реакции на медицински помагала</th>
+        <th>Иницијали за име </th>
+        <th>Датум на раѓање</th>
+        <th>Возраст Години</th>
+        <th>OutComeOfAverseReaction</th>
+        <th>ErrorDetectionDate</th>
+        <th>connectionBetweenAdverseReaction</th>
+        <th>Suspectno medicinsko pomagalo</th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.OfficialGazzete.ApplicationForUnwantedMedDevices</td>
+            <td>@item.OfficialGazzete.PersonFullName</td>
+            <td>@item.OfficialGazzete.DateOfBirthFormatted</td>
+            <td>@item.OfficialGazzete.PersonAge</td>
+            <td>@item.OfficialGazzete.DescribeYourAdverseReaction</td>
+            <td>@item.OfficialGazzete.OutComeOfAverseReaction</td>
+            <td>@item.OfficialGazzete.ErrorDetectionDate</td>
+            <td>@item.OfficialGazzete.ConnectionBetweenAdverseReaction</td>
+            <td>@item.MedicalDeviceInfo.SuspectedMedicalDevice</td>
+        </tr>
+    }
+
+</table>

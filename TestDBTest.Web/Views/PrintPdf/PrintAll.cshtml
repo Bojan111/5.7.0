@@ -1,0 +1,115 @@
+﻿@model IEnumerable<TestDBTest.Services.OfficialGazzet.Dto.OfficialGazzeteDto>
+
+@{
+    ViewBag.Title = "PrintAll";
+}
+<style>
+    #table {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+        #table td, #table th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #table tr:hover {
+            background-color: #ddd;
+        }
+
+        #table th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+</style>
+
+<h2>PrintAll</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table id="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ApplicationForUnwantedMedDevices)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DescribeYourAdverseReaction)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ErrorDetectionDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonLastName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonFullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonAge)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PersonDateOfBirth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfBirthFormatted)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ApplicationForUnwantedMedDevices)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescribeYourAdverseReaction)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ErrorDetectionDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonLastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonFullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonAge)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PersonDateOfBirth)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfBirthFormatted)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>

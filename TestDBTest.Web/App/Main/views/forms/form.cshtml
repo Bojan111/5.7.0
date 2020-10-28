@@ -1,0 +1,56 @@
+﻿<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+    <div class="">
+        <div class="row clearfix" ng-controller="app.views.forms.form as vm">
+            <button type="button" data-toggle="modal" style="margin-right: 26px; margin-bottom: 23px" class="btn btn-primary btn-circle waves-effect waves-circle waves-float pull-right" ng-click="vm.openTaskCreationModal()">
+                <i class="material-icons">add</i>
+            </button>
+
+            <table class="table table-hover table-striped">
+                <thead>
+                    <tr>
+                        <th>Име и Презиме</th>
+                        <th>Година/датум на раѓање</th>
+                        <th>Пол</th>
+                        <th>Датум на детекција на грешката</th>
+                        <th>Време на детекција на грешката</th>
+                        <th>Место/оддел на детекција на грешката</th>
+                        <th>Место/оддел на креирање на грешката</th>
+                        <th>Near Miss</th>
+                        <th>Медицинска грешка</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody ng-repeat="form in vm.forms">
+                    <tr>
+                        <td>{{form.personName}} {{form.personLastName}}</td>
+                        <td>{{form.personDateOfBirth}}</td>
+                        <td>{{form.personGenderFormatted}}</td>
+                        <td>{{form.personErrorDetectionDate}}</td>
+                        <td>{{form.personErrorDetectionDate}}</td>
+                        <td>{{form.placeOfErrorDetectionFormatted}}</td>
+                        <td>{{form.placeOfCreationErrorFormatted}}</td>
+                        <td>{{form.nearMissId}}</td>
+                        <td>{{form.medicalErrorId}}</td>
+                        <td class="dropdown">
+                            <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                <i class="material-icons">menu</i>
+                            </a>
+                            <ul class="dropdown-menu pull-right">
+                                <li><a class="waves-effect waves-block" ng-click="vm.openFormEditModal(form)"><i class="material-icons">create</i>Edit</a></li>
+                                <li><a href="javascript:void(0);" class="waves-effect waves-block" ng-click="vm.delete(form)"><i class="material-icons">delete_sweep</i>Delete</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+
+<style>
+    .app-modal-window .modal-dialog {
+        width: 80%;
+    }
+</style>

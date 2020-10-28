@@ -1,0 +1,215 @@
+﻿<form id="frm_create_user" method="post" name="userCreateForm" novalidate>
+    <div class="modal-header">
+        <button type="button" class="close" ng-click="vm.cancel()" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="container">
+            <header>
+                <h4>Службен весник на РМ, бр. 79 од 24.06.2009 година</h4>
+                <hr style="border: 1px solid black">
+                <div style="border: 1px solid black">
+                    <div class="row container">
+                        <div class="col-lg-4 ">
+                            <h2>ПРИЈАВИЛ ЗА НЕСАКАНИ РЕАКЦИИ НА МЕДИЦИНСКИ ПОМАГАЛА</h2>
+                        </div>
+                        <div class="col-lg-6">
+                            <textarea name="" id="" cols="50" rows="10" ng-model="vm.gazette.officialGazzete.applicationForUnwantedMedDevices"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-sm-11">
+                        <p class="text-right">Потполнува Националниот Центар</p>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <section>
+                    <h2 class="text-center">I.ИНФОРМАЦИЈА ЗА ПАЦИЕНТОТ И НЕСАКАНАТА РЕАКЦИЈА</h2>
+                    <div style="border: 1px solid black">
+                        <div class="row container">
+                            <div class="col-lg-12 text-center table-bordered" style="margin-bottom: 10px">
+                                <div class="col-xs-2">
+                                    <p>1. Иницијали на пациентот</p>
+                                    <label for="TaskAssignedPerson">@L("AssignTo")</label>
+                                    <select id="TaskAssignedPerson" class="form-control" ng-model="vm.gazette.officialGazzete.personId" ng-options="s.id as s.name + ' ' + s.lastName for s in vm.persons">
+                                        <option value="">@L("SelectPerson")</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-2">
+                                    <p>4-6. Почеток на несаканаа реакција</p>
+                                    <input type="date" ng-model="vm.gazette.officialGazzete.errorDetectionDate">
+                                </div>
+                                <div class="col-xs-2">
+                                    <p style="width: 109px;" class="text-left">8-13 ИСХОД ОД НЕСАКАНАТА РЕАКЦИЈА</p>
+                                    <label for="Outcome">@L("AssignTo")</label>
+                                    <select id="Outcome" class="form-control" ng-model="vm.gazette.officialGazzete.outComeOfAverseReaction">
+                                        <option value="0">Оздравување без последици</option>
+                                        <option value="1">Оздравување со последици</option>
+                                        <option value="2">Несакано дејство во тек</option>
+                                        <option value="3">Смрт</option>
+                                        <option value="4">Загрозување на животот</option>
+                                        <option value="5">Непознат</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-8" style="margin-bottom: 10px">
+                                <p>
+                                    7 + 13 ОПИШЕТЕ ЈА НЕСАКАНАТА РЕАКЦИЈА (-А)
+                                    <span>
+                                        (вклучувајќи и релевантни податоци од
+                                        изведени тестови/лабораториски анализи)
+                                    </span>
+                                </p>
+                                <textarea name="" id="" cols="50" rows="10" ng-model="vm.gazette.officialGazzete.describeYourAdverseReaction"></textarea>
+                            </div>
+
+                            <div class="col-lg-8">
+                                <p>13. ПОВРЗАНОСТ ПОМЕЃУ НЕСАКАНАТА РЕАКЦИЈА И СУСПЕКНТОТО МЕДИЦИНСКО ПОМАГАЛО</p>
+                                <label for="Outcome">@L("AssignTo")</label>
+                                <select id="Outcome" class="form-control" ng-model="vm.gazette.officialGazzete.connectionBetweenAdverseReaction">
+                                    <option value="0">Сигурна</option>
+                                    <option value="1">Веројатна</option>
+                                    <option value="2">Можна</option>
+                                    <option value="3">Малку веројатна</option>
+                                    <option value="4">Не може да се класифицира</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="text-center">II. ИНФОРМАЦИЈА ЗА СУСПЕКТНОТО МЕДИЦИНСКО ПОМАГАЛО</h2>
+                    <div class="table-bordered container">
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <p>14. СУСПЕКТНО МЕДИЦИНСКО ПОМАГАЛО(име и класа)</p>
+                                <textarea name="" id="" cols="50" rows="3" ng-model="vm.gazette.medicalDeviceInfo.suspectedMedicalDevice"></textarea>
+                            </div>
+                            <div class="col-lg-4">
+                                <p>18. ДАЛИ РЕАКЦИЈАТА ИСЧЕЗНА ПО ПРЕКИНОТ НА ПРИМЕНАТА НА МЕДИЦИНСКОТО ПОМАГАЛО</p>
+                                <select id="Outcome" class="form-control" ng-model="vm.gazette.medicalDeviceInfo.didReactionGoneAfterUseMedicalDevice">
+                                    <option value="0">Да</option>
+                                    <option value="1">Не</option>
+                                    <option value="2">Непознато</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-8">
+                                <p>15. НАЧИН НА ПРИМЕНА</p>
+                                <textarea name="" id="" cols="50" rows="3" ng-model="vm.gazette.medicalDeviceInfo.methodOfApplication"></textarea>
+                            </div>
+                            <div class="col-lg-8">
+                                <p>16. ИНДИКАЦИЈА ЗА ПРИМЕНА</p>
+                                <textarea name="" id="" cols="50" rows="3" ng-model="vm.gazette.medicalDeviceInfo.indicationOfUse"></textarea>
+                            </div>
+                            <div class="col-lg-4">
+                                <p>
+                                    19. ДАЛИ РЕАКЦИЈАТА ПОВТОРНО СЕ ЈАВУВА ПО ПОВТОРЕНАТА ПРИМЕНА НА МЕДИЦИНСКОТО ПОМАГАЛО
+                                </p>
+                                <select id="Outcome" class="form-control" ng-model="vm.gazette.medicalDeviceInfo.doesTheReactionOccurAgain">
+                                    <option value="0">Да</option>
+                                    <option value="1">Не</option>
+                                    <option value="2">Непознато</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <p>17. ДАТУМ НА ПОЧЕТОКОТ И КРАЈ НА ПРИМЕНАТА НА МЕДИЦИНСКОТО ПОМАГАЛО(од/до)</p>
+                            <label for="">од</label>
+                            <input type="date" ng-model="vm.gazette.medicalDeviceInfo.startDateFillForm">
+                            <label for="">до</label>
+                            <input type="date" ng-model="vm.gazette.medicalDeviceInfo.endDateFillForm">
+                        </div>
+                    </div>
+
+                </section>
+                <section>
+                    <h2 class="text-center">III. ИСТОВРЕМЕНА УПОТРЕА НА ДРУГИ МЕДИЦИНСКИ ПОМАГАЛА И/ИЛИ ЛЕКОВИ И ИСТОРИЈА НА ПАЦИЕНТОТ</h2>
+                    <div class="row table-bordered container">
+                        <div class="col-lg-12">
+                            <p>20. ИСТОВРЕМЕНА УПОТРЕБА НА ДРУГИ МЕДИЦИНСКИ ПОМАГАЛА И/ИЛИ ЛЕКОВИ И ДАТУМ НА ПРИМЕНА<span>(не се вклучуваат лековите употребени за третман на несаканото дејство)</span><p>
+                                <textarea name="" id="" cols="40" rows="3" ng-model="vm.gazette.useOfMedicalDevices.concomitantUseOfOtherMedicalDevices"></textarea>
+                        </div>
+                        <div class="col-lg-12">
+                            <p>21. ДРУГИ РЕЛЕВАНТНИ ПОДАТОЦИ<span>(пр. дијагностички процедури, алергија, бременост и др.)</span><p>
+                                <textarea name="" id="" cols="40" rows="3" ng-model="vm.gazette.useOfMedicalDevices.otherRelevantInformation"></textarea>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h2 class="text-center">IV. ИНФОРМАЦИЈА ЗА ПРОИЗВОДИТЕЛОТ И ПОДНОСИТЕЛОТ НА ПРИЈАВАТА</h2>
+                    <div class="row table-bordered container">
+                        <div class="col-lg-8">
+                            <p>22a. ПРОИЗВОДИТЕЛ <span>(име и адреса)</span></p>
+                            <input type="text" placeholder="Име" ng-model="vm.gazette.manufacturerInfo.manufacturName">
+                            <input type="text" placeholder="Адреса" ng-model="vm.gazette.manufacturerInfo.manufaturAddress">
+                            <div class="row container" style="margin-bottom: 20px">
+                                <div class="col-xs-4">
+                                    <p>22Б. Број на серијата на медицинското помагало</p>
+                                    <input type="number" placeholder="num" ng-model="vm.gazette.manufacturerInfo.numberOfMedicalDevice">
+                                </div>
+                                <div class="col-xs-4">
+                                    <p>22д. Датум на пополнување на пријавата</p>
+                                    <input type="date" ng-model="vm.gazette.manufacturerInfo.dateOfUseMedicalDevice">
+                                </div>
+                            </div>
+                            <div class="row container">
+                                <div class="col-xs-4">
+                                    <p>22д.Извор на пријавата</p>
+                                    <select id="Outcome" class="form-control" ng-model="vm.gazette.manufacturerInfo.sourceOfApplication">
+                                        <option value="0">Болница</option>
+                                        <option value="1">Општ доктор</option>
+                                        <option value="2">Доктор специјалист</option>
+                                        <option value="3">Друго</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-4">
+                                    <p>23. Тип на пријава</p>
+                                    <select id="Outcome" class="form-control" ng-model="vm.gazette.manufacturerInfo.typeOfApp">
+                                        <option value="0">Спонтана</option>
+                                        <option value="1">Од клиничка студија</option>
+                                        <option value="2">Целно мониторирање на подносливоста на медицинското помагало</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <p>24. Подносител на пријавата</p>
+                            <div class="col-xs-8">
+                                <p>Здравствена установа:</p>
+                                <input type="text" ng-model="vm.gazette.manufacturerInfo.applicantHealthInstitution">
+                            </div>
+                            <div class="col-xs-8">
+                                <p>Име и презиме на здравствен работник, специјанлост</p>
+                                <input type="text" ng-model="vm.gazette.manufacturerInfo.applicantFullNameHealthWorker">
+                            </div>
+                            <div class="col-xs-8">
+                                <p>Адреса:</p>
+                                <input type="text" ng-model="vm.gazette.manufacturerInfo.applicantAddress">
+                            </div>
+                            <div class="col-xs-8">
+                                <p>Контакт телефон:</p>
+                                <input type="number" ng-model="vm.gazette.manufacturerInfo.applicantPhone">
+                            </div>
+                            <div class="col-xs-8">
+                                <p>Електронска пошта</p>
+                                <input type="email" ng-model="vm.gazette.manufacturerInfo.applicantEmail">
+                            </div>
+                            <div class="col-xs-8">
+                                <p>Потпис</p>
+                                <textarea name="" id="" cols="20" rows="3" ng-model="vm.gazette.manufacturerInfo.signature"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" ng-click="vm.cancel()">@L("Cancel")</button>
+        <button type="submit" class="btn btn-primary blue" ng-click="vm.saveTask()" @*ng-disabled="tenantCreateForm.$invalid"*@>@L("Save")</button>
+    </div>
+</form>
+
