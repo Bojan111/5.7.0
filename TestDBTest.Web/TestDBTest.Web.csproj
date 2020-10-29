@@ -587,6 +587,7 @@
       <DependentUpon>main.css</DependentUpon>
     </Content>
     <Content Include="App\Main\services\appSession.js" />
+    <Content Include="App\Main\views\chartJs\chart.js" />
     <Content Include="App\Main\views\countries\country.js" />
     <Content Include="App\Main\views\countries\createCountry.js" />
     <Content Include="App\Main\views\countries\editCountry.js" />
@@ -605,6 +606,9 @@
     <Content Include="App\Main\views\layout\sidebar-nav.js" />
     <Content Include="App\Main\views\layout\sidebar-user-area.js" />
     <Content Include="App\Main\views\layout\topbar.js" />
+    <Content Include="App\Main\views\listOfInfo\createList.js" />
+    <Content Include="App\Main\views\listOfInfo\editList.js" />
+    <Content Include="App\Main\views\listOfInfo\listOfInfo.js" />
     <Content Include="App\Main\views\people\createPeople.js" />
     <Content Include="App\Main\views\people\editPerson.js" />
     <Content Include="App\Main\views\people\person.js" />
@@ -626,6 +630,8 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Chart.css" />
+    <Content Include="Content\Chart.min.css" />
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\themes\base\accordion.css" />
@@ -2890,6 +2896,10 @@
     <Content Include="App\Main\views\gazettes\createGazette.cshtml" />
     <Content Include="App\Main\views\gazettes\editGazette.cshtml" />
     <Content Include="App_Browsers\qt.browser" />
+    <Content Include="App\Main\views\listOfInfo\listOfInfo.cshtml" />
+    <Content Include="App\Main\views\listOfInfo\createList.cshtml" />
+    <Content Include="App\Main\views\listOfInfo\editList.cshtml" />
+    <Content Include="App\Main\views\chartJs\chart.cshtml" />
     <None Include="bundleconfig.json" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
@@ -2953,6 +2963,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
+    <Content Include="Scripts\Chart.js" />
+    <Content Include="Scripts\Chart.min.js" />
     <Content Include="Scripts\i18n\angular-locale_af-na.js" />
     <Content Include="Scripts\i18n\angular-locale_af-za.js" />
     <Content Include="Scripts\i18n\angular-locale_af.js" />

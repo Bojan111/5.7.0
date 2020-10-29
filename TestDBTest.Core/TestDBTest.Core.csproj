@@ -209,6 +209,7 @@
   <ItemGroup>
     <Compile Include="Entities\ConnectionBetweenAdverseReaction.cs" />
     <Compile Include="Entities\Countries.cs" />
+    <Compile Include="Entities\ListOfInformation.cs" />
     <Compile Include="Entities\ManufacturerInfo.cs" />
     <Compile Include="Entities\MedicalDeviceInfo.cs" />
     <Compile Include="Entities\MedicalError.cs" />

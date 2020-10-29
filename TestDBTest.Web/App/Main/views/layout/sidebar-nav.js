@@ -14,7 +14,9 @@
                 createMenuItem(App.localize("About"), "", "info", "about"),
 
                 createMenuItem(App.localize("Menu"), "", "menu", "", [
-                    createMenuItem("List", "", "business", "list"),
+                    createMenuItem("Task", "", "business", "list"),
+                    createMenuItem("Chart", "", "business", "chart"),
+                    createMenuItem("ListOfInformation", "business", "listOfInfo"),
                     createMenuItem("People", "", "business", "person"),
                     createMenuItem("Countries", "", "business", "country"),
                     createMenuItem("Forms", "", "business", "form"),

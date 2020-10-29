@@ -15,5 +15,8 @@ namespace TestDBTest.Services.ManufacturerInfo
         public ManufacturerInfoAppService(IRepository<Entities.ManufacturerInfo, int> repository) : base(repository)
         {
         }
+
+
+       
     }
 }

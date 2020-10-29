@@ -9,10 +9,10 @@
 
             
             function getAllPeople() {
-                abp.ui.setBusy( 
+                abp.ui.setBusy(
                     null,
 
-                    personService.getAllPeople({ 
+                    personService.getAllPeople({
 
                     }).then(function (data) {
                         vm.people = data.data.people;

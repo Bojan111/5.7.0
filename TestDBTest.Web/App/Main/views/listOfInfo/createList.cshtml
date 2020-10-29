@@ -1,0 +1,59 @@
+﻿<div>
+    <form id="PeopleTask" role="form" name="createTaskForm" novalidate>
+
+        <div class="modal-header">
+            <button type="button" class="close" aria-label="Close" ng-click="vm.cancel()">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            <h4 class="modal-title">
+                <span>@L("CreateListOfInformation")</span>
+            </h4>
+        </div>
+        <div class="modal-body">
+            <div class="form-group form-float">
+                <div class="form-line">
+                    <input class="form-control" type="text" name="country" ng-model="vm.lists.personName" required maxlength="64" minlength="2">
+                    <label class="form-label">Person Name</label>
+                </div>
+            </div>
+            <div class="form-group form-float">
+                <div class="form-line">
+                    <input class="form-control" type="text" name="city" ng-model="vm.lists.personLastName" required maxlength="64" minlength="2">
+                    <label class="form-label">Person Last Name</label>
+                </div>
+            </div>
+            <div class="form-group form-float">
+                <div class="form-line">
+                    <input class="form-control" type="text" name="city" ng-model="vm.lists.personAge" required maxlength="64" minlength="2">
+                    <label class="form-label">Person Age</label>
+                </div>
+            </div>
+            <div class="form-group form-float">
+                <div class="form-line">
+                    <input class="form-control" type="text" name="city" ng-model="vm.lists.personGender" required maxlength="64" minlength="2">
+                    <label class="form-label">Person Gender</label>
+                </div>
+            </div>
+            <div class="form-group form-float">
+                <div class="form-line">
+                    <input class="form-control" type="text" name="city" ng-model="vm.lists.personDateOfBirth" required maxlength="64" minlength="2">
+                    <label class="form-label">Person Date Of Birth</label>
+                </div>
+            </div>
+            <div class="form-group form-float">
+                <div class="form-line">
+                    <input class="form-control" type="text" name="city" ng-model="vm.lists.assignedCountryCountry" required maxlength="64" minlength="2">
+                    <label class="form-label">Country</label>
+                </div>
+            </div>
+            <div class="form-group form-float">
+                <div class="form-line">
+                    <input class="form-control" type="text" name="city" ng-model="vm.lists.assignedCountryCity" required maxlength="64" minlength="2">
+                    <label class="form-label">@L("City")</label>
+                </div>
+            </div>
+
+            <button ng-click="vm.saveTask()" ng-disabled="newTaskForm.$invalid" type="button" class="btn btn-primary">@L("CreateTheTask")</button>
+        </div>
+    </form>
+</div>

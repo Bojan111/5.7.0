@@ -290,6 +290,9 @@
     <Compile Include="People\Dtos\UpdatePersonInput.cs" />
     <Compile Include="People\IPersonAppService.cs" />
     <Compile Include="People\PersonAppService.cs" />
+    <Compile Include="Services\ListOfInformation\Dto\ListOfInformationDto.cs" />
+    <Compile Include="Services\ListOfInformation\IListOfInformationAppService.cs" />
+    <Compile Include="Services\ListOfInformation\ListOfInformationAppService.cs" />
     <Compile Include="Services\ManufacturerInfo\Dto\ManufacturerInfoDto.cs" />
     <Compile Include="Services\ManufacturerInfo\IManufacturerInfoAppService.cs" />
     <Compile Include="Services\ManufacturerInfo\ManufacturerInfoAppService.cs" />

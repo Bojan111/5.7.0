@@ -59,16 +59,7 @@
                 $urlRouterProvider.otherwise('/roles');
             }
 
-            if (abp.auth.hasPermission('Pages.Tenants')) {
-                $stateProvider
-                    .state('tenants', {
-                        url: '/tenants',
-                        templateUrl: '/App/Main/views/tenants/index.cshtml',
-                        menu: 'Tenants' //Matches to name of 'Tenants' menu in TestDBTestNavigationProvider
-                    });
-                $urlRouterProvider.otherwise('/tenants');
-            }
-
+        
             $stateProvider
                 .state('home', {
                     url: '/',
@@ -102,6 +93,11 @@
                     url: '/person',
                     templateUrl: '/App/Main/views/people/person.cshtml',
                     menu: 'PeopleTask' //Matches to name of 'NewTask' menu in SimpleTaskSystemNavigationProvider
+                })
+                .state('listOfInfo', {
+                    url: '/listOfInfo',
+                    templateUrl: '/App/Main/views/listOfInfo/listOfInfo.cshtml',
+                    menu: 'ListTask' //Matches to name of 'NewTask' menu in SimpleTaskSystemNavigationProvider
                 });
             $stateProvider
                 .state('form', {
@@ -113,6 +109,11 @@
                     url: '/gazette',
                     templateUrl: '/App/Main/views/gazettes/gazette.cshtml',
                     menu: 'Gazette' //Matches to name of 'NewTask' menu in SimpleTaskSystemNavigationProvider
+                })
+                .state('chart', {
+                    url: '/chart',
+                    templateUrl: '/App/Main/views/chartJs/chart.cshtml',
+                    menu: 'Chart' //Matches to name of 'Tenants' menu in TestDBTestNavigationProvider
                 });
         }
     ]);

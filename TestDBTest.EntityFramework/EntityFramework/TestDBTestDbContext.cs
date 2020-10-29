@@ -30,6 +30,7 @@ namespace TestDBTest.EntityFramework
         public virtual IDbSet<UseOfMedicalDevices> UseOfMedicalDevices { get; set; }
         public virtual IDbSet<OfficialGazzete> OfficialGazzete { get; set; }
         public virtual IDbSet<ManufacturerInfo> ManufacturerInfo { get; set; }
+        public virtual IDbSet<ListOfInformation> ListOfInformation { get; set; }
         public TestDBTestDbContext()
             : base("Default")
         {

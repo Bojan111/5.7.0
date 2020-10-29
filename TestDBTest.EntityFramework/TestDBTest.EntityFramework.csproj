@@ -296,6 +296,10 @@
     <Compile Include="Migrations\202010160956367_gazette_deleted_prop.designer.cs">
       <DependentUpon>202010160956367_gazette_deleted_prop.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010290815201_newEntityListOfInformation.cs" />
+    <Compile Include="Migrations\202010290815201_newEntityListOfInformation.designer.cs">
+      <DependentUpon>202010290815201_newEntityListOfInformation.cs</DependentUpon>
+    </Compile>
     <Compile Include="TestDBTestDataModule.cs" />
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -366,6 +370,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010160956367_gazette_deleted_prop.resx">
       <DependentUpon>202010160956367_gazette_deleted_prop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010290815201_newEntityListOfInformation.resx">
+      <DependentUpon>202010290815201_newEntityListOfInformation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

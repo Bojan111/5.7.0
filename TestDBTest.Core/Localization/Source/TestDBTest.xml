@@ -96,5 +96,7 @@
     <text name="PeopleTask" value="People Task"></text>
     <text name="FormTask" value="Form Task"></text>
     <text name="OfficialGazzete" value="Gazzete Task"></text>
+    <text name="ListOfInformation" value="List Of Informaton"></text>
+    <text name="Chart" value="Chart"></text>
   </texts>
 </localizationDictionary>
