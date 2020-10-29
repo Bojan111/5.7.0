@@ -23,14 +23,6 @@ namespace TestDBTest.EntityFramework
         public virtual IDbSet<Task> Tasks { get; set; }
         public virtual IDbSet<Countries> Countries { get; set; }
         public virtual IDbSet<Person> People { get; set; }
-        public virtual IDbSet<TypeOfApplication> TypeOfApplication { get; set; }
-        public virtual IDbSet<NearMiss> NearMiss { get; set; }
-        public virtual IDbSet<MedicalError> MedicalError { get; set; }
-        public virtual IDbSet<MedicalDeviceInfo> MedicalDeviceInfo { get; set; }
-        public virtual IDbSet<UseOfMedicalDevices> UseOfMedicalDevices { get; set; }
-        public virtual IDbSet<OfficialGazzete> OfficialGazzete { get; set; }
-        public virtual IDbSet<ManufacturerInfo> ManufacturerInfo { get; set; }
-        public virtual IDbSet<ListOfInformation> ListOfInformation { get; set; }
         public TestDBTestDbContext()
             : base("Default")
         {
